@@ -1,0 +1,20 @@
+.myButton {
+  background-color: #1877f2;
+  color: white;
+  border-radius: 5px;
+  border-color: #1877f2;
+  width: 10vw;
+  min-width: 150px;
+  height: 5vh;
+  min-height: 100px;
+  margin-top: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 200%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.myButton:hover {
+  background-color: #f26b6b;
+  border-color: #f26b6b;
+}

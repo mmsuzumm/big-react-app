@@ -1,0 +1,30 @@
+.popupWindow {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.popupWindow.popupWindowActive {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.popupWindowContent {
+  position: relative;
+  border-radius: 1%;
+  background-color: rgb(255, 255, 255);
+  height: 60vh;
+  min-height: 600px;
+  width: 40vw;
+  min-width: 350px;
+}

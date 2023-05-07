@@ -1,0 +1,48 @@
+.authWindow {
+  display: flex;
+  flex-direction: column;
+}
+
+.authWindow input {
+  width: 100%;
+  height: 3vh;
+  min-height: 35px;
+  border: 1px solid antiquewhite;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.authWindow input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(249, 173, 73) inset !important;
+  background-color: rgb(249, 173, 73);
+  border: 1px solid rgb(249, 173, 73);
+}
+
+.buttonContainer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttonContainer button {
+  background-color: #1877f2;
+  color: white;
+  border-color: #1877f2;
+  margin-bottom: 10px;
+}
+
+.inputContainer {
+  display: flex;
+  /* justify-content: flex-end; */
+  margin-bottom: 10px;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.inputContainer input::placeholder {
+  text-align: center;
+}
