@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import styles from '../auth.module.scss';
 import Button from '../../../ui/button/Button';
+import styles from '../auth.module.scss';
 
 const Login: FC = () => {
   const [inputData, setInputData] = useState({

@@ -1,8 +1,15 @@
+/**
+ * Creates a navigation menu at the top
+ * or
+ * creates a navigation hamburger-menu at the top if client is a phone
+ */
+
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../button/Button';
 import Popup from '../../screen/auth/auth-popup/Popup';
-import { useState } from 'react';
 import styles from './Menu.module.scss';
+
 const Menu = () => {
   const [authActive, setAuthActive] = useState<boolean>(false);
   const [authType, setAuthType] = useState<boolean>(true);
