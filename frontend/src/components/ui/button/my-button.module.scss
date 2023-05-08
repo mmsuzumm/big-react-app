@@ -14,9 +14,9 @@
   font-size: 200%;
   user-select: none;
   cursor: pointer;
-}
 
-.myButton:hover {
-  background-color: map-get($LM, btnHoverColor);
-  border-color: map-get($LM, btnHoverColor);
+  &:hover {
+    background-color: map-get($LM, btnHoverColor);
+    border-color: map-get($LM, btnHoverColor);
+  }
 }

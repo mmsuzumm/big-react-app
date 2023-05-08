@@ -14,11 +14,11 @@
   pointer-events: none;
   transition: 0.5s;
   user-select: none;
-}
 
-.popupWindow.popupWindowActive {
-  pointer-events: all;
-  opacity: 1;
+  &.popupWindowActive {
+    pointer-events: all;
+    opacity: 1;
+  }
 }
 
 .popupWindowContent {
