@@ -1,13 +1,27 @@
 @import '../../../variables.scss';
 
-.myButton {
-  background-color: map-get($LM, btnBgColor);
+.navBar {
+  background-color: rgb(249, 255, 159);
+  display: flex;
+  height: 65px;
+  margin-top: 5px;
+
+  .navLinks {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.reactLinks {
   color: map-get($LM, btnColor);
+  background-color: map-get($LM, btnBgColor);
   border-color: map-get($LM, btnBgColor);
+  text-decoration: none;
   border-radius: 5px;
   width: 10vw;
   min-width: 150px;
   height: 100%;
+  margin-right: 2px;
   transition: background-color 0.3s, border-color 0.3s;
   font-size: 200%;
   user-select: none;

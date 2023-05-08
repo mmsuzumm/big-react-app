@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NotFound from '../notFound/NotFound';
 import MainLayouts from '../../../layouts/MainLayouts';
+import NotFound from '../notFound/NotFound';
 
 const Home: FC = () => {
   return (

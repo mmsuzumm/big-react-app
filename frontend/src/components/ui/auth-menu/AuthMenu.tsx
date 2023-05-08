@@ -7,7 +7,7 @@ interface IAuthMenu {
 }
 
 const AuthMenu: FC<IAuthMenu> = ({ setIsRegister, isRegister }) => {
-  const authMenuClassNames = `${styles.authMenuRegister} ${
+  const authMenuClassNames = `${styles.authMenu} ${
     isRegister ? styles.registerActive : styles.loginActive
   }`;
   return (
