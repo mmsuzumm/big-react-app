@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './auth-menu.module.css';
+import styles from './auth-menu.module.scss';
 
 interface IAuthMenu {
   setIsRegister: React.Dispatch<React.SetStateAction<boolean>>;

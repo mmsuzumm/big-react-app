@@ -1,7 +1,9 @@
+@import '../../../../variables.scss';
+
 .popupWindow {
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: map-get($LM, bgPopUp);
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +24,7 @@
 .popupWindowContent {
   position: relative;
   border-radius: 1%;
-  background-color: rgb(255, 255, 255);
+  background-color: map-get($LM, bgPopUpContent);
   height: 60vh;
   min-height: 600px;
   width: 40vw;
