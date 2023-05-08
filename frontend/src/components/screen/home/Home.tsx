@@ -1,37 +1,19 @@
-import { useState, FC } from 'react';
-import Popup from '../auth/auth-popup/Popup';
-import Button from '../../ui/button/Button';
+import { FC } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NotFound from '../notFound/NotFound';
+import MainLayouts from '../../../layouts/MainLayouts';
 
 const Home: FC = () => {
-  const [authActive, setAuthActive] = useState<boolean>(false);
-  const [authType, setAuthType] = useState<boolean>(true);
-
-  const handleLoginClick = () => {
-    setAuthType(false);
-    setAuthActive(true);
-  };
-
-  const handleRegisterClick = () => {
-    setAuthType(true);
-    setAuthActive(true);
-  };
-
   return (
-    <div>
-      <Button onClick={handleRegisterClick} title={'Register'} disabled={false}>
-        Register
-      </Button>
-      <Button onClick={handleLoginClick} title={'Login'} disabled={false}>
-        Login
-      </Button>
-
-      <Popup
-        active={authActive}
-        setActive={setAuthActive}
-        authType={authType}
-        setAuthType={setAuthType}
-      ></Popup>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayouts />}>
+          <Route path="/contacts" element={<NotFound />}></Route>
+          <Route path="/about" element={<NotFound />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
