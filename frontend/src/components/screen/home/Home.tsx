@@ -1,9 +1,12 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayouts from '../../../layouts/MainLayouts';
 import NotFound from '../notFound/NotFound';
+import { Context } from '../../../index';
 
 const Home: FC = () => {
+  const { user } = useContext(Context);
+  console.log(user);
   return (
     <BrowserRouter>
       <Routes>
