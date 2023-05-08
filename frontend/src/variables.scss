@@ -1,0 +1,26 @@
+// LM = Light mode
+// DM = Dark mode
+// AC = Autocomplete
+// Bg/bg = background
+
+$LM: (
+  bgPopUp: rgba(0, 0, 0, 0.4),
+  bgPopUpContent: white,
+
+  authMenuRegisterColor: white,
+  authMenuRegisterBgColorH2: white,
+
+  authMenuSelectedColor: black,
+  authMenuSelectedBgColor: white,
+
+  inputAuthDefault: antiquewhite,
+  inputAuthAC: #f9ad49,
+  btnColor: white,
+  btnColorActive: black,
+  btnBgColor: #1877f2,
+  btnHoverColor: #f26b6b,
+);
+
+// :export {
+//   LM: $LM;
+// }

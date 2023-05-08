@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './my-button.module.css';
+import styles from './my-button.module.scss';
 
 interface ButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;

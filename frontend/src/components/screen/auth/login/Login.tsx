@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import styles from '../auth.module.css';
+import styles from '../auth.module.scss';
 import Button from '../../../ui/button/Button';
 
 const Login: FC = () => {

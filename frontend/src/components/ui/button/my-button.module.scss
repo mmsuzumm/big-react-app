@@ -1,8 +1,10 @@
+@import '../../../variables.scss';
+
 .myButton {
-  background-color: #1877f2;
-  color: white;
+  background-color: map-get($LM, btnBgColor);
+  color: map-get($LM, btnColor);
+  border-color: map-get($LM, btnBgColor);
   border-radius: 5px;
-  border-color: #1877f2;
   width: 10vw;
   min-width: 150px;
   height: 5vh;
@@ -15,6 +17,6 @@
 }
 
 .myButton:hover {
-  background-color: #f26b6b;
-  border-color: #f26b6b;
+  background-color: map-get($LM, btnHoverColor);
+  border-color: map-get($LM, btnHoverColor);
 }
