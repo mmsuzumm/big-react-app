@@ -4,29 +4,24 @@
   display: flex;
   color: map-get($LM, authMenuRegisterColor);
   padding-bottom: 2vh;
+  h2 {
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    flex: 1;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 10vh;
+    background-color: map-get($LM, btnBgColor);
+
+    &:hover {
+      background-color: map-get($LM, btnHoverColor);
+      color: map-get($LM, btnColor);
+      cursor: pointer;
+    }
+  }
 }
 
-.authMenuRegister h2 {
-  transition: all 0.2s ease-in-out;
-  user-select: none;
-  flex: 1;
-  text-align: center;
-  border-radius: 6px;
-  line-height: 10vh;
-  background-color: map-get($LM, btnBgColor);
-}
-
-.authMenuRegister h2:hover {
-  background-color: map-get($LM, btnHoverColor);
-  color: map-get($LM, btnColor);
-  cursor: pointer;
-}
-
-.registerActive h2:first-child {
-  background-color: map-get($LM, authMenuSelectedBgColor);
-  color: map-get($LM, authMenuSelectedColor);
-}
-
+.registerActive h2:first-child,
 .loginActive h2:nth-child(2) {
   background-color: map-get($LM, authMenuSelectedBgColor);
   color: map-get($LM, authMenuSelectedColor);
