@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../button/Button';
 import Popup from '../../screen/auth/auth-popup/Popup';
-import styles from './Menu.module.scss';
+import styles from './navbar.module.scss';
 
 const Menu = () => {
   const [authActive, setAuthActive] = useState<boolean>(false);
@@ -25,9 +25,17 @@ const Menu = () => {
   };
   return (
     <nav className={styles.navBar}>
-      <Link to="/">Home</Link>
-      <Link to="/contacts">Contacts</Link>
-      <Link to="/about">About</Link>
+      <div className={styles.navLinks}>
+        <Link to="/" className={styles.reactLinks}>
+          Home
+        </Link>
+        <Link to="/contacts" className={styles.reactLinks}>
+          Contacts
+        </Link>
+        <Link to="/about" className={styles.reactLinks}>
+          About
+        </Link>
+      </div>
       <Button onClick={handleRegisterClick} title={'Register'} disabled={false}>
         Register
       </Button>

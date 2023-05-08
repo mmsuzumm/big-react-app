@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { FC } from 'react';
-import Menu from '../components/ui/site-menu/Menu';
+import Menu from '../components/ui/navbar/NavBar';
 
 const MainLayouts: FC = () => {
 
