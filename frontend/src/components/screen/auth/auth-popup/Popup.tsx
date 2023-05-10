@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import AuthMenu from '../../../ui/auth-menu/AuthMenu';
+import AuthMenu from '../auth-menu/AuthMenu';
 import Login from '../login/Login';
 import Register from '../register/Register';
 import styles from './popup.module.scss';
