@@ -14,7 +14,6 @@ type TypeContext = {
 };
 
 export const Context = createContext<TypeContext>({ user: null });
-
 root.render(
   <React.StrictMode>
     <Context.Provider

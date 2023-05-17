@@ -1,12 +1,20 @@
 import { FC, useState } from 'react';
 import Button from '../../../ui/button/Button';
 import styles from '../auth.module.scss';
+import { login } from '../../../../http/userAPI';
 
 const Login: FC = () => {
+  const singIn = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    const response = await login({ ...inputData });
+    console.log(response);
+  };
+
   const [inputData, setInputData] = useState({
-    login: '',
-    pass: '',
-    rePass: '',
+    email: '',
+    password: '',
   });
   return (
     <>
@@ -14,9 +22,9 @@ const Login: FC = () => {
         <div className={styles.inputContainer}>
           <input
             type="text"
-            value={inputData['login']}
+            value={inputData['email']}
             onChange={(e) =>
-              setInputData({ ...inputData, login: e.target.value })
+              setInputData({ ...inputData, email: e.target.value })
             }
             placeholder="Email or phone"
           ></input>
@@ -24,16 +32,18 @@ const Login: FC = () => {
         <div className={styles.inputContainer}>
           <input
             type="password"
-            value={inputData['pass']}
+            value={inputData['password']}
             onChange={(e) =>
-              setInputData({ ...inputData, pass: e.target.value })
+              setInputData({ ...inputData, password: e.target.value })
             }
             placeholder="Password"
           ></input>
         </div>
         <div className={styles.buttonContainer}>
           <Button
-            onClick={() => {}}
+            onClick={(e) => {
+              singIn(e);
+            }}
             title={'Register a new account'}
             disabled={false}
           >

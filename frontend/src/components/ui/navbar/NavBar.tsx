@@ -3,26 +3,16 @@
  * or
  * creates a navigation hamburger-menu at the top if client is a phone
  */
-
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../button/Button';
-import Popup from '../../screen/auth/auth-popup/Popup';
+import FullAuth from '../../screen/auth/full-auth/FullAuth';
 import styles from './navbar.module.scss';
+import { Context } from '../../../index';
 
 const Menu = () => {
-  const [authActive, setAuthActive] = useState<boolean>(false);
-  const [authType, setAuthType] = useState<boolean>(true);
+  const { user } = useContext(Context);
+  console.log(user?.isAuth);
 
-  const handleLoginClick = () => {
-    setAuthType(false);
-    setAuthActive(true);
-  };
-
-  const handleRegisterClick = () => {
-    setAuthType(true);
-    setAuthActive(true);
-  };
   return (
     <nav className={styles.navBar}>
       <div className={styles.navLinks}>
@@ -36,19 +26,7 @@ const Menu = () => {
           About
         </Link>
       </div>
-      <Button onClick={handleRegisterClick} title={'Register'} disabled={false}>
-        Register
-      </Button>
-      <Button onClick={handleLoginClick} title={'Login'} disabled={false}>
-        Login
-      </Button>
-
-      <Popup
-        active={authActive}
-        setActive={setAuthActive}
-        authType={authType}
-        setAuthType={setAuthType}
-      ></Popup>
+      {user?.isAuth ? <div></div> : <FullAuth></FullAuth>}
     </nav>
   );
 };
