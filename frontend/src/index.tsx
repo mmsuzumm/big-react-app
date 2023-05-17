@@ -14,8 +14,6 @@ type TypeContext = {
 };
 
 export const Context = createContext<TypeContext>({ user: null });
-// console.log(require('path'));
-console.log(process.env.REACT_APP_API_URL);
 root.render(
   <React.StrictMode>
     <Context.Provider
