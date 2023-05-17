@@ -1,13 +1,23 @@
 import { FC, useState } from 'react';
 import Button from '../../../ui/button/Button';
+import { registration } from '../../../../http/userAPI';
+// import validatePassword from '../../../../utils/validatePassword';
 import styles from '../auth.module.scss';
 
 const Register: FC = () => {
+  const singIn = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event?.preventDefault();
+    const response = await registration({ ...inputData });
+    console.log(response);
+  };
+
   const [inputData, setInputData] = useState({
-    mail: '',
+    email: '',
     username: '',
-    pass: '',
-    rePass: '',
+    password: '',
+    rePassword: '',
   });
 
   return (
@@ -15,8 +25,10 @@ const Register: FC = () => {
       <div className={styles.inputContainer}>
         <input
           type="text"
-          value={inputData['mail']}
-          onChange={(e) => setInputData({ ...inputData, mail: e.target.value })}
+          value={inputData['email']}
+          onChange={(e) =>
+            setInputData({ ...inputData, email: e.target.value })
+          }
           placeholder="Email or phone number"
         ></input>
       </div>
@@ -33,24 +45,28 @@ const Register: FC = () => {
       <div className={styles.inputContainer}>
         <input
           type="password"
-          value={inputData['pass']}
-          onChange={(e) => setInputData({ ...inputData, pass: e.target.value })}
+          value={inputData['password']}
+          onChange={(e) =>
+            setInputData({ ...inputData, password: e.target.value })
+          }
           placeholder="Password"
         ></input>
       </div>
       <div className={styles.inputContainer}>
         <input
           type="password"
-          value={inputData['rePass']}
+          value={inputData['rePassword']}
           onChange={(e) =>
-            setInputData({ ...inputData, rePass: e.target.value })
+            setInputData({ ...inputData, rePassword: e.target.value })
           }
           placeholder="Confirm password"
         ></input>
       </div>
       <div className={styles.buttonContainer}>
         <Button
-          onClick={() => {}}
+          onClick={(e) => {
+            singIn(e);
+          }}
           title={'Register a new account'}
           disabled={false}
         >
