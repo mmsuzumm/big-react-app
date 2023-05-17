@@ -1,7 +1,8 @@
-import { host, authHost } from './index';
+import { host } from './index';
 
 interface IRegistration {
   email: string;
+  username: string;
   password: string;
   rePassword: string;
 }
